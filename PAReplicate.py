@@ -11,7 +11,7 @@
 #
 #The script is well commented and easy to understand, so it can be easily modified to suit your specific needs.
 #
-#To run the script, simply navigate to the script directory in the command prompt and run the command: python script_name.py
+#To run the script, simply navigate to the script directory in the command prompt and run the command: python PAReplicate.py
 #
 #Thank you for using our script, and please feel free to reach out to us if you have any questions or need any assistance.
 #
