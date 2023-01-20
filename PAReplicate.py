@@ -17,7 +17,7 @@
 # Update the SMTP variable accordingly as well as uncomment the #server.starttls()
 #
 # To run the script, simply navigate to the script directory in the command prompt and run the command: python PAReplicate.py
-#
+# Make sure to place the following files in the script directory: BackupUser.cred, BackupUser.cred.entropy, Vault.ini and Vault.ini
 # Thank you for using our script, and please feel free to reach out to us if you have any questions or need any assistance.
 #
 import subprocess
