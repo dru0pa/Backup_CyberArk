@@ -1,17 +1,32 @@
-# Backup_CyberArk
+# CyberArk PAReplicate Automation Script
 
-Welcome to our script that automates the execution of CyberArk PAReplicate.exe and emails the log file PAReplicate.log, which has been zipped and password protected.
-This script was developed with help from OpenAI.
+This Python script automates the execution of CyberArk's `PAReplicate.exe` utility and securely emails the log file (`PAReplicate.log`) as a zipped and password-protected attachment.
 
-This script is designed to make the process of running PAReplicate.exe and managing the log files as efficient and secure as possible.
-The script will execute the PAReplicate.exe and create a log file named PAReplicate.log. This log file will be zipped and password protected for added security. 
-Once the script has completed, an email will be sent to the specified recipient with the zipped, password-protected log file as an attachment.
+## Description
 
-Before running the script, please ensure that you have the necessary dependencies installed, such as Python and the required libraries.
-You will also need to have access to the PAReplicate.exe file, the email credentials and the email address of the recipient to whom the log file will be sent.
+This script streamlines the process of running CyberArk backups using `PAReplicate.exe` and ensures the secure handling of log files. It performs the following actions:
 
-The script is well commented and easy to understand, so it can be easily modified to suit your specific needs.
+1. **Executes PAReplicate.exe:** Runs the `PAReplicate.exe` utility with specified configurations for backups.
+2. **Manages Log Files:**  Handles the `PAReplicate.log` file, including moving and appending content to maintain a history of backups.
+3. **Zips and Password-Protects:** Compresses the log file into a ZIP archive and protects it with a password for security.
+4. **Emails the Log:** Sends an email with the zipped log file as an attachment to a designated recipient.
 
-To run the script, simply navigate to the script directory in the command prompt and run the command: python PAReplicate.py
+## Prerequisites
 
-Thank you for using our script, and please feel free to reach out to us if you have any questions or need any assistance.
+* **Python 3.12.x:** This script is compatible with Python 3.12.x.
+* **CyberArk 14.x:**  This script supports CyberArk version 14.x.
+* **7-Zip:** You need 7-Zip installed and accessible via the command line (`7z.exe`).
+* **Email Credentials:** Ensure you have the necessary email credentials (sender address, password, SMTP server details) to send the email.
+* **PAReplicate.exe:**  You need access to the `PAReplicate.exe` file in your CyberArk installation directory.
+
+## Usage
+
+1. **Configuration:**
+   * **Update Paths:** Modify the script to reflect the correct paths for your CyberArk installation and 7-Zip.
+   * **SMTP Settings:**  Update the `SMTP_SERVER`, `sender_email`, `sender_password`, and `receiver_email` variables with your email configuration.
+   * **Password:**  Set a strong password for the ZIP archive by replacing `"StrongPassword123!"` in the `os.system()` command.
+2. **Placement:** Place the `PAReplicate-new.py` script in the `C:\Scripts` folder (or adjust the path accordingly).
+3. **Execution:** Open a command prompt, navigate to the script directory, and run:
+
+   ```bash
+   python PAReplicate-new.py
